@@ -1,6 +1,6 @@
 export default {
-  title: 'Posts',
-  name: 'post',
+  title: 'Projects',
+  name: 'project',
   type: 'document',
   fields: [
     {
@@ -19,14 +19,24 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      title: 'Labels',
-      name: 'labels',
+      title: 'Image',
+      name: 'image',
+      type: 'image',
+    },
+    {
+      title: 'Year',
+      name: 'year',
+      type: 'date',
+    },
+    {
+      title: 'Type',
+      name: 'type',
       type: 'array',
       of: [{type: 'string'}]
     },
     {
-      title: 'Content',
-      name: 'content',
+      title: 'Text',
+      name: 'text',
       type: 'array',
       of: [{type: 'richText'}]
     }
@@ -34,7 +44,7 @@ export default {
   preview: {
     prepare() {
       return {
-        title: 'Post'
+        title: 'Project'
       }
     }
   }

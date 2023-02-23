@@ -9,7 +9,7 @@ export default {
       title: 'Modules',
       name: 'modules',
       type: 'array',
-      of: [{type: 'hero'}, {type: 'recentPosts'}]
+      of: [{type: 'hero'}, {type: 'recentPosts'}, {type: 'featureProjects'}]
     }
   ],
   preview: {
