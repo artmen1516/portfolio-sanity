@@ -6,11 +6,6 @@ export default {
   icon: HomeIcon,
   fields: [
     {
-      name: 'heroExample',
-      type: 'hero',
-      title: 'Hero example'
-    },
-    {
       title: 'Modules',
       name: 'modules',
       type: 'array',
