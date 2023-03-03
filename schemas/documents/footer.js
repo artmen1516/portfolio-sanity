@@ -1,9 +1,10 @@
-import {DocumentIcon} from '@sanity/icons'
+import {MenuIcon} from '@sanity/icons'
+
 export default {
   title: 'Footer',
   name: 'footer',
   type: 'document',
-  icon: DocumentIcon,
+  icon: MenuIcon,
   fields: [
     {
       title: 'Footer',
@@ -18,9 +19,13 @@ export default {
     }
   ],
   preview: {
+    select: {
+      title: 'title'
+    },
     prepare() {
       return {
-        title: 'Footer',
+        title: 'Header',
+        media: MenuIcon
       }
     }
   }

@@ -1,7 +1,10 @@
+import {ComposeIcon} from '@sanity/icons'
+
 export default {
   title: 'Posts',
   name: 'post',
   type: 'document',
+  icon: ComposeIcon,
   fields: [
     {
       title: 'Title',
@@ -32,9 +35,13 @@ export default {
     }
   ],
   preview: {
-    prepare() {
+    select: {
+      title: 'title'
+    },
+    prepare({title}) {
       return {
-        title: 'Post'
+        title: title,
+        media: ComposeIcon
       }
     }
   }

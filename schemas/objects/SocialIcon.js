@@ -1,3 +1,4 @@
+import {MobileDeviceIcon} from '@sanity/icons'
 
 export default {
   title: 'Social Icon',
@@ -29,6 +30,7 @@ export default {
       return {
         title: title,
         subtitle: subtitle,
+        media: MobileDeviceIcon
       }
     }
   }

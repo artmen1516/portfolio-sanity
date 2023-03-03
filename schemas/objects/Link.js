@@ -1,3 +1,4 @@
+import {LinkIcon} from '@sanity/icons'
 
 export default {
   title: 'Link',
@@ -18,4 +19,17 @@ export default {
       }
     }
   ],
+  preview: {
+    select: {
+      title: 'label',
+      subtitle: 'slug.current'
+    },
+    prepare({title, subtitle}) {
+      return {
+        title: title,
+        subtitle: subtitle,
+        media: LinkIcon
+      }
+    }
+  }
 }

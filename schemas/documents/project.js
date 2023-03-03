@@ -1,7 +1,11 @@
+import {PresentationIcon} from '@sanity/icons'
+
+
 export default {
   title: 'Projects',
   name: 'project',
   type: 'document',
+  icon: PresentationIcon,
   fields: [
     {
       title: 'Title',
@@ -42,9 +46,14 @@ export default {
     }
   ],
   preview: {
-    prepare() {
+    select: {
+      title: 'title',
+      image: 'image'
+    },
+    prepare({title, image}) {
       return {
-        title: 'Project'
+        title: title,
+        media: image || PresentationIcon
       }
     }
   }

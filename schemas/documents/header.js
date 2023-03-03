@@ -1,9 +1,10 @@
-import {DocumentIcon} from '@sanity/icons'
+import {MenuIcon} from '@sanity/icons'
+
 export default {
   title: 'Header',
   name: 'header',
   type: 'document',
-  icon: DocumentIcon,
+  icon: MenuIcon,
   fields: [
     {
       title: 'Links',
@@ -13,9 +14,13 @@ export default {
     }
   ],
   preview: {
+    select: {
+      title: 'title'
+    },
     prepare() {
       return {
         title: 'Header',
+        media: MenuIcon
       }
     }
   }
