@@ -10,39 +10,38 @@ export default {
       title: 'Title',
       name: 'title',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: (Rule) => Rule.required(),
     },
     {
       title: 'Slug',
       name: 'slug',
       type: 'slug',
       options: {
-        source: 'title'
+        source: 'title',
       },
-      validation: Rule => Rule.required()
+      validation: (Rule) => Rule.required(),
     },
     {
       title: 'Labels',
       name: 'labels',
       type: 'array',
-      of: [{type: 'string'}]
+      of: [{type: 'string'}],
     },
     {
       title: 'Content',
       name: 'content',
-      type: 'array',
-      of: [{type: 'richText'}]
-    }
+      type: 'richText',
+    },
   ],
   preview: {
     select: {
-      title: 'title'
+      title: 'title',
     },
     prepare({title}) {
       return {
         title: title,
-        media: ComposeIcon
+        media: ComposeIcon,
       }
-    }
-  }
+    },
+  },
 }
