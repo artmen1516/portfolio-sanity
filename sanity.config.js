@@ -6,10 +6,10 @@ import { structure } from './desk'
 
 export default defineConfig({
   name: 'default',
-  title: process.env.SANITY_STUDIO_PROJECT_TITLE || 'Portfolio',
+  title: process.env.SANITY_STUDIO_PROJECT_TITLE,
 
-  projectId: process.env.SANITY_STUDIO_PROJECT_TITLE || 'kc8fuu63',
-  dataset: process.env.SANITY_STUDIO_DATASET || 'production',
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID,
+  dataset: process.env.SANITY_STUDIO_DATASET,
 
   plugins: [deskTool({ structure }), visionTool()],
 
