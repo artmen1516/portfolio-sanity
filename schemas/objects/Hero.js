@@ -1,4 +1,4 @@
-import {ImageIcon} from '@sanity/icons'
+import { ImageIcon } from '@sanity/icons'
 
 export default {
   title: 'Hero',
@@ -6,10 +6,15 @@ export default {
   type: 'object',
   fields: [
     {
-      title: 'Title',
-      name: 'title',
+      title: 'First Title',
+      name: 'firstTitle',
       type: 'string',
       validation: Rule => Rule.required()
+    },
+    {
+      title: 'Second Title',
+      name: 'secondTitle',
+      type: 'string'
     },
     {
       title: 'Subtitle',
@@ -23,6 +28,11 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      title: 'Resume file',
+      name: 'resumeFile',
+      type: 'file'
+    },
+    {
       title: 'Button label',
       name: 'buttonLabel',
       type: 'string'
@@ -30,11 +40,11 @@ export default {
   ],
   preview: {
     select: {
-      title: 'title',
+      title: 'firstTitle',
       subtitle: 'subtitle',
       media: 'imageSrc'
     },
-    prepare({title, subtitle, media}) {
+    prepare({ title, subtitle, media }) {
       return {
         title: title,
         subtitle: subtitle,

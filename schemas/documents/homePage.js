@@ -1,4 +1,4 @@
-import {HomeIcon} from '@sanity/icons'
+import { HomeIcon } from '@sanity/icons'
 export default {
   title: 'Home page',
   name: 'homePage',
@@ -9,7 +9,7 @@ export default {
       title: 'Modules',
       name: 'modules',
       type: 'array',
-      of: [{type: 'hero'}, {type: 'recentPosts'}, {type: 'featureProjects'}]
+      of: [{ type: 'hero' }, { type: 'recentPosts' }, { type: 'featureProjects' }]
     }
   ],
   preview: {

@@ -1,4 +1,4 @@
-import {ComposeIcon} from '@sanity/icons'
+import { ComposeIcon } from '@sanity/icons'
 
 export default {
   title: 'Recent posts',
@@ -15,7 +15,7 @@ export default {
     select: {
       title: 'title'
     },
-    prepare({title}) {
+    prepare({ title }) {
       return {
         title: title,
         media: ComposeIcon
